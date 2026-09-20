@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { SESSION_COOKIE, verifySessionToken } from '../../../../lib/auth';
-import { getSupabase, STORAGE_BUCKET } from '../../../../lib/supabase';
+import { getSupabase, hasSupabase, STORAGE_BUCKET } from '../../../../lib/supabase';
 import { ALLOWED_UPLOAD_TYPES, limitForType, prettyBytes } from '../../../../lib/media';
 
 function slugify(str) {
@@ -53,6 +53,13 @@ export async function POST(request) {
   const key = `uploads/${slugify(label)}-${Date.now().toString(36)}-${Math.random()
     .toString(36)
     .slice(2, 8)}.${ext}`;
+
+  if (!hasSupabase()) {
+    return NextResponse.json(
+      { error: 'Supabase Storage is not configured in local development mode.' },
+      { status: 501 }
+    );
+  }
 
   const supabase = getSupabase();
   const { data, error } = await supabase.storage.from(STORAGE_BUCKET).createSignedUploadUrl(key);

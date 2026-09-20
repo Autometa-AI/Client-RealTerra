@@ -108,7 +108,7 @@ export default function ProjectSearch({ projects, filters, search }) {
               <p className="project-desc-text">{p.description}</p>
               <div className="project-stats-row">
                 <div className="p-stat"><div className="p-stat-val">{p.from}</div><div className="p-stat-label">From</div></div>
-                <div className="p-stat"><div className="p-stat-val">{p.yield}</div><div className="p-stat-label">Yield</div></div>
+                <div className="p-stat"><div className="p-stat-val">{p.type || p.yield}</div><div className="p-stat-label">Type</div></div>
                 <div className="p-stat"><div className="p-stat-val">{p.handover}</div><div className="p-stat-label">Handover</div></div>
               </div>
             </div>

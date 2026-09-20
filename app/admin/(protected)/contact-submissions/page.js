@@ -1,17 +1,11 @@
-import { getSupabase } from '../../../../lib/supabase';
+import { getContactSubmissions } from '../../../../lib/submissions';
 import { fmtDateTime } from '../../../../lib/deep';
 import ExportCsv from '../../../../components/admin/ExportCsv';
 
 export const metadata = { title: 'Contact Page Fillups' };
 
 export default async function ContactSubmissions() {
-  const { data: rows, error } = await getSupabase()
-    .from('contact_submissions')
-    .select('*')
-    // Project-page enquiries have their own section.
-    .is('project', null)
-    .order('created_at', { ascending: false })
-    .limit(500);
+  const { rows, error } = await getContactSubmissions();
 
   return (
     <div>

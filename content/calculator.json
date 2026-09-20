@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "INVESTMENT MODELING TOOL",
+    "headline": "Dubai Property ROI & Acquisition Cost Calculator",
+    "subhead": "Model complete upfront purchase costs, Dubai Land Department (DLD) fees, net rental yield scenarios, and UAE 10-Year Golden Visa eligibility in real time.",
+    "image": "/images/luxury-development.jpg"
+  },
+  "defaultValues": {
+    "defaultPrice": 2500000,
+    "defaultType": "off-plan",
+    "defaultRentalYield": 7.5,
+    "defaultServiceChargeSqFt": 16,
+    "defaultAreaSqFt": 1050
+  },
+  "faqs": [
+    {
+      "q": "How is the 4% Dubai Land Department (DLD) fee calculated?",
+      "a": "The DLD transfer fee is universally 4% of the agreed property purchase value, plus a standard administrative knowledge and innovation fee of AED 580 for off-plan registrations (Oqood) or AED 4,200 for ready property Title Deed registrations."
+    },
+    {
+      "q": "What is the difference between gross rental yield and net rental yield?",
+      "a": "Gross rental yield is annual rental income divided by the purchase price. Net rental yield deducts annual building service charges (typically AED 12–30 per sq.ft), property management fees, and maintenance provisions, representing the actual cash-in-hand return."
+    },
+    {
+      "q": "Can off-plan properties qualify for the UAE 10-Year Golden Visa?",
+      "a": "Yes. Real estate with a total contract value of AED 2,000,000 or greater qualifies for the 10-Year Golden Visa. For off-plan purchases, developers provide official DLD-attested letters verifying milestone status or equity payments to initiate the residency application."
+    },
+    {
+      "q": "Are there any hidden brokerage fees when buying off-plan?",
+      "a": "No. When acquiring off-plan developments through RealTerra, broker commission is 0% to the buyer. Brokerage fees are settled directly by the master developer under official RERA agreements."
+    }
+  ],
+  "seo": {
+    "title": "Dubai Property ROI & Fee Calculator 2025 | DLD Fees, Net Yield & Golden Visa",
+    "description": "Calculate exact Dubai property acquisition costs, 4% DLD fees, trustee charges, net rental yields, and 10-Year Golden Visa eligibility in real time."
+  }
+}

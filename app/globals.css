@@ -807,6 +807,20 @@ footer {
   flex-wrap: wrap;
 }
 .footer-copy { font-size: 0.68rem; color: rgba(250,249,246,0.24); letter-spacing: 0.05em; }
+.footer-legal-links { display: flex; align-items: center; gap: 1.25rem; }
+.footer-legal-link {
+  font-size: 0.68rem;
+  color: rgba(250,249,246,0.38);
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  text-decoration-color: rgba(250,249,246,0.2);
+  text-underline-offset: 3px;
+  transition: color var(--t-base) var(--ease), text-decoration-color var(--t-base) var(--ease);
+}
+.footer-legal-link:hover {
+  color: var(--signal);
+  text-decoration-color: var(--signal);
+}
 .footer-rera {
   font-family: var(--mono);
   font-size: 0.64rem;

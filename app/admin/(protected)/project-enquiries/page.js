@@ -1,16 +1,11 @@
-import { getSupabase } from '../../../../lib/supabase';
+import { getProjectEnquiries } from '../../../../lib/submissions';
 import { fmtDateTime } from '../../../../lib/deep';
 import ExportCsv from '../../../../components/admin/ExportCsv';
 
 export const metadata = { title: 'Project Enquiries' };
 
 export default async function ProjectEnquiries() {
-  const { data: rows, error } = await getSupabase()
-    .from('contact_submissions')
-    .select('*')
-    .not('project', 'is', null)
-    .order('created_at', { ascending: false })
-    .limit(500);
+  const { rows, error } = await getProjectEnquiries();
 
   // Grouped by project so you can see which developments are pulling interest.
   const byProject = (rows || []).reduce((acc, r) => {

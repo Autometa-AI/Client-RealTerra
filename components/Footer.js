@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import SocialIcon from './SocialIcon';
-import { visibleSocials } from '../lib/site';
+import { visibleSocials, marketHref } from '../lib/site';
 
 export default function Footer({ site }) {
   const { footer } = site;
@@ -33,18 +33,21 @@ export default function Footer({ site }) {
           )}
         </div>
         <div>
-          <p className="footer-col-title">Pages</p>
+          <p className="footer-col-title">Advisory & Tools</p>
           <ul className="footer-links">
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/guide">Investor Guide</Link></li>
+            <li><Link href="/calculator">ROI Calculator</Link></li>
             {site.nav.links.map((l) => (
               <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
             ))}
           </ul>
         </div>
         <div>
-          <p className="footer-col-title">Markets</p>
+          <p className="footer-col-title">Focus Markets</p>
           <ul className="footer-links">
             {footer.marketLinks.map((name) => (
-              <li key={name}><Link href="/markets">{name}</Link></li>
+              <li key={name}><Link href={marketHref(name)}>{name}</Link></li>
             ))}
           </ul>
         </div>
@@ -59,6 +62,10 @@ export default function Footer({ site }) {
       </div>
       <div className="footer-bottom">
         <p className="footer-copy">{footer.copyright}</p>
+        <div className="footer-legal-links">
+          <Link href="/privacy" className="footer-legal-link">Privacy Policy</Link>
+          <Link href="/terms" className="footer-legal-link">Terms of Service</Link>
+        </div>
         <p className="footer-rera">{footer.licenseLine}</p>
       </div>
     </footer>

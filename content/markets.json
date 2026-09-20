@@ -22,64 +22,166 @@
   },
   "markets": [
     {
+      "slug": "al-marjan-island",
       "location": "Ras Al Khaimah",
       "name": "Al Marjan Island",
+      "tagline": "The Middle East's premier integrated gaming and luxury hospitality archipelago.",
       "description": "The UAE's most anticipated gaming and hospitality destination. The Wynn Al Marjan, the region's first integrated gaming resort, represents a structural inflection point: the moment a market permanently reprices. Comparable case studies from Singapore's Marina Bay Sands and Macau suggest a 40–60% step-change in surrounding residential values within 36 months of opening. We entered this market early.",
       "image": "/images/al-marjan-island.jpg",
       "capitalGrowth": "↑ 68%",
-      "rentalYield": "7.2 – 9.1%",
+      "rentalYield": "Studio, 1 BHK, 2 BHK",
       "entryPoint": "From AED 700K",
-      "conviction": "Very High"
+      "conviction": "Very High",
+      "pricePerSqFt": "AED 1,600 – 3,200",
+      "expectedGrossYield": "8.5% – 11.2%",
+      "catalysts": [
+        "Wynn Al Marjan Resort & Casino opening (Q1 2027) bringing 5M+ annual high-net-worth visitors.",
+        "RAK International Airport expansion and direct international flight agreements.",
+        "Zero personal income tax and freehold ownership status for all foreign nationalities."
+      ],
+      "faqs": [
+        {
+          "question": "Can foreigners buy freehold property in Al Marjan Island?",
+          "answer": "Yes. Al Marjan Island is a 100% freehold designated investment zone in Ras Al Khaimah, allowing foreign national investors full title deed ownership."
+        },
+        {
+          "question": "What is driving capital growth on Al Marjan Island?",
+          "answer": "The primary catalyst is the $3.9 billion Wynn Resorts integrated gaming resort, which has triggered global hospitality brands (Nobu, Nikki Beach, W Hotels) and unprecedented rental demand projections."
+        },
+        {
+          "question": "Are Al Marjan Island properties eligible for the UAE Golden Visa?",
+          "answer": "Yes. Properties purchased with an equity valuation of AED 2,000,000 or greater qualify for the 10-year renewable UAE Golden Visa."
+        }
+      ]
     },
     {
+      "slug": "dubai-south",
       "location": "Dubai",
       "name": "Dubai South",
+      "tagline": "The 145-sq-km master planned city anchoring the world's largest airport.",
       "description": "Al Maktoum International Airport's expansion to a planned 150 million passenger capacity makes Dubai South the most significant long-play in the emirate. This is a city within a city, designed from the ground up, with aviation, logistics, and residential living converging around the world's largest airport. Early-mover advantage here is closing rapidly as institutional capital takes notice.",
       "image": "/images/dubai-south.jpg",
       "capitalGrowth": "↑ 54%",
-      "rentalYield": "6.8 – 8.4%",
+      "rentalYield": "1 BHK, 2 BHK, 3 BHK & Villas",
       "entryPoint": "From AED 650K",
-      "conviction": "High"
+      "conviction": "High",
+      "pricePerSqFt": "AED 1,100 – 1,900",
+      "expectedGrossYield": "7.8% – 9.6%",
+      "catalysts": [
+        "AED 128 billion Al Maktoum International Airport expansion relocating all Dubai International operations.",
+        "Expo City Dubai transformation into an international innovation and corporate headquarters hub.",
+        "Dubai Metro Blue & Red line expansions directly connecting Dubai South to Downtown and Marina."
+      ],
+      "faqs": [
+        {
+          "question": "Why is Dubai South considered a generational real estate opportunity?",
+          "answer": "The transition of all air traffic from DXB to Al Maktoum Airport will make Dubai South the primary transit and employment corridor of Dubai, generating hundreds of thousands of new permanent jobs."
+        },
+        {
+          "question": "What property types are available in Dubai South?",
+          "answer": "Dubai South features masterplanned golf communities, luxury townhouses, off-plan residential apartments, and luxury villas developed by tier-one master developers."
+        }
+      ]
     },
     {
+      "slug": "dubai-maritime-city",
       "location": "Dubai",
       "name": "Dubai Maritime City",
+      "tagline": "Prime waterfront peninsula positioned minutes from Downtown Dubai.",
       "description": "Positioned between Port Rashid and Business Bay, this waterfront district is the decade's most underpriced opportunity. Maritime commerce, superyacht berths, and residential living are converging in a precinct that sits minutes from Downtown Dubai but trades at a meaningful discount. Zoning history and infrastructure commitments point to a step-change in pricing over the next 18–36 months.",
       "image": "/images/dubai-maritime-city.jpg",
       "capitalGrowth": "↑ 41%",
-      "rentalYield": "6.2 – 7.8%",
+      "rentalYield": "1 BHK, 2 BHK, 3 BHK",
       "entryPoint": "From AED 1.1M",
-      "conviction": "High"
+      "conviction": "High",
+      "pricePerSqFt": "AED 1,900 – 3,400",
+      "expectedGrossYield": "7.2% – 8.8%",
+      "catalysts": [
+        "Direct marine access to Arabian Gulf and adjacency to Rashid Yachts & Marina.",
+        "Limited waterfront land supply in central Dubai driving structural scarcity premiums.",
+        "Rapid high-end developer entry including Omniyat, Beyond, and master infrastructure upgrades."
+      ],
+      "faqs": [
+        {
+          "question": "How does Dubai Maritime City compare to Dubai Marina or Palm Jumeirah?",
+          "answer": "DMC offers comparable panoramic Arabian Gulf waterfront living at a 30–45% discount on price-per-square-foot compared to mature coastal communities, providing superior capital appreciation upside."
+        }
+      ]
     },
     {
+      "slug": "meydan-mbr-city",
       "location": "Dubai",
       "name": "Meydan & MBR City",
+      "tagline": "Ultra-luxury lagoon communities, world-class racing, and expansive family estates.",
       "description": "Lifestyle-driven demand from HNIs drawn to space, connectivity, and prestige. Meydan's racecourse proximity and Mohammed Bin Rashid City's masterplan density create a compound-growth story built on genuine scarcity. Villa and townhouse products here consistently outperform on secondary market liquidity, a key metric in our selection framework.",
       "image": "/images/meydan-mbr.jpg",
       "capitalGrowth": "↑ 59%",
-      "rentalYield": "5.5 – 7.0%",
+      "rentalYield": "2 BHK, 3 BHK, 4 BHK & Villas",
       "entryPoint": "From AED 1.8M",
-      "conviction": "High"
+      "conviction": "High",
+      "pricePerSqFt": "AED 2,100 – 4,500",
+      "expectedGrossYield": "6.8% – 8.2%",
+      "catalysts": [
+        "Crystal Lagoon network creating true beachfront living 8 minutes from Downtown Dubai.",
+        "Meydan One Mall retail and hospitality completion.",
+        "Strong secondary market resale liquidity driven by international family office relocations."
+      ],
+      "faqs": [
+        {
+          "question": "What makes MBR City distinctive for high-net-worth investors?",
+          "answer": "MBR City offers unmatched low-density luxury, artificial swimmable crystal lagoons, and top international schools, all within 10 minutes of the DIFC financial district."
+        }
+      ]
     },
     {
+      "slug": "business-bay",
       "location": "Dubai",
       "name": "Business Bay",
+      "tagline": "The dynamic commercial and high-density residential core of modern Dubai.",
       "description": "The nerve centre of new Dubai. Liquidity, density, and demand remain structurally robust, making Business Bay a portfolio anchor for investors who value stable yield with secondary market depth. Not the highest growth story on this page, but among the most reliable. We use it as a ballast in multi-asset portfolios.",
       "image": "/images/dubai-architecture.jpg",
       "capitalGrowth": "↑ 38%",
-      "rentalYield": "5.9 – 7.2%",
+      "rentalYield": "Studio, 1 BHK, 2 BHK",
       "entryPoint": "From AED 900K",
-      "conviction": "Moderate–High"
+      "conviction": "Moderate–High",
+      "pricePerSqFt": "AED 1,800 – 3,800",
+      "expectedGrossYield": "7.5% – 9.1%",
+      "catalysts": [
+        "Dubai Water Canal promenade completion attracting branded luxury towers (Dorchester, Bugatti, Franck Muller).",
+        "Direct pedestrian and transit integration with Downtown Dubai and Burj Khalifa district.",
+        "Extremely high international corporate tenant demand ensuring year-round high occupancy."
+      ],
+      "faqs": [
+        {
+          "question": "Is Business Bay suitable for short-term holiday home rentals?",
+          "answer": "Yes. Business Bay is one of Dubai's top performing short-term holiday let districts due to its proximity to Downtown Dubai, the Dubai Mall, and the DIFC financial center."
+        }
+      ]
     },
     {
+      "slug": "saadiyat-yas-island",
       "location": "Abu Dhabi",
       "name": "Saadiyat & Yas Island",
+      "tagline": "The capital's global cultural district and premier entertainment destination.",
       "description": "Abu Dhabi's cultural and leisure flagship. With the Louvre, the upcoming Guggenheim, and Formula 1 as permanent anchors, the case for capital appreciation here is institutional-grade. A market supported by government-linked developers, Abu Dhabi's own HNI relocation drive, and some of the most architecturally significant residential product in the GCC.",
       "image": "/images/saadiyat-island.jpg",
       "capitalGrowth": "↑ 45%",
-      "rentalYield": "6.0 – 7.5%",
+      "rentalYield": "1 BHK, 2 BHK, 3 BHK & Penthouses",
       "entryPoint": "From AED 1.3M",
-      "conviction": "High"
+      "conviction": "High",
+      "pricePerSqFt": "AED 1,700 – 4,200",
+      "expectedGrossYield": "6.5% – 8.0%",
+      "catalysts": [
+        "Zayed National Museum and Guggenheim Abu Dhabi openings completing the Saadiyat Cultural District.",
+        "Pristine natural white-sand beaches protected under strict ecological building covenants.",
+        "Abu Dhabi government sovereign backing guaranteeing institutional execution quality."
+      ],
+      "faqs": [
+        {
+          "question": "Can international buyers purchase freehold property on Saadiyat Island?",
+          "answer": "Yes. Saadiyat Island was designated an investment zone in Abu Dhabi, permitting 100% foreign freehold ownership."
+        }
+      ]
     }
   ],
   "requestLinkLabel": "Request area report",

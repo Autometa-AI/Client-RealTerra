@@ -202,129 +202,326 @@
 }
 .hero-search-empty a { color: var(--pine); font-weight: 600; text-decoration: underline; }
 
-/* ── APPROACH — pinned tile slider ──────────
-   The section is a tall scroll runway; the panel inside sticks to the
-   viewport while the page moves through it, and each screenful advances one
-   tile. `--approach-steps` comes from the component and is however many
-   pillars the CMS holds. */
+/* ── APPROACH — single-line interactive cards enlarging on scroll ── */
 .approach {
   position: relative;
   background: var(--navy);
-  /* One pinned screen, plus a stretch of runway per tile. A full viewport
-     per tile would cost five screens of scrolling to get past four words —
-     0.62 keeps each change deliberate without holding the page hostage. */
-  height: calc((100svh - var(--nav-h)) + var(--approach-steps, 4) * 62svh);
+  /* Sticky scroll runway: gives deliberate scroll distance to expand each pillar card sequentially */
+  height: calc((100svh - var(--nav-h)) + var(--approach-steps, 4) * 55svh);
 }
+
 .approach-pin {
   position: sticky;
   top: var(--nav-h);
   height: calc(100svh - var(--nav-h));
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4rem;
-  padding: 4rem var(--gutter);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem var(--gutter);
   isolation: isolate;
 }
-/* The photograph is atmosphere, not subject matter: it sits well back so the
-   four pillars are legible at a glance. At 0.28 with a scrim that thinned to
-   0.62 on the right, the tiles were being read against lit windows. */
-.approach-media { position: absolute; inset: 0; z-index: -1; opacity: 0.16; }
-.approach-media img,
-.approach-media video { width: 100%; height: 100%; object-fit: cover; }
-.approach-pin::before {
-  content: '';
-  position: absolute; inset: 0;
+
+.approach-bg-media {
+  position: absolute;
+  inset: 0;
   z-index: -1;
-  background:
-    linear-gradient(to right, var(--navy) 0%, rgba(15,61,51,0.94) 55%, rgba(15,61,51,0.86) 100%);
+  opacity: 0.08;
   pointer-events: none;
 }
-.approach-head { max-width: 30rem; }
-.approach-head h2 { color: var(--paper); }
+.approach-bg-media img,
+.approach-bg-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.approach-pin::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(43,168,144,0.06) 0%, transparent 40%),
+    linear-gradient(to bottom, var(--navy) 0%, rgba(15,61,51,0.96) 60%, rgba(10,41,33,0.98) 100%);
+  pointer-events: none;
+}
+
+/* Header bar */
+.approach-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  flex-shrink: 0;
+}
+
+.approach-header-left {
+  max-width: 38rem;
+}
+
+.approach-headline {
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-top: 0.4rem;
+}
+
 .approach-sub {
   color: rgba(250,249,246,0.78);
-  margin-top: 1rem;
-  font-size: 0.92rem;
-  max-width: 38ch;
+  margin-top: 0.6rem;
+  font-size: 0.94rem;
+  max-width: 46ch;
+  line-height: 1.6;
 }
-.approach-link { margin-top: 2rem; }
 
-.approach-progress { display: flex; gap: 0.5rem; margin-top: 2rem; }
-.approach-dot {
-  width: 26px; height: 2px;
-  background: rgba(250,249,246,0.2);
-  transition: background var(--t-base) var(--ease);
+.approach-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.25rem;
+  flex-shrink: 0;
 }
-.approach-dot.on { background: var(--signal); }
 
-.approach-track { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-/* The track carries `reveal` purely to be handed `.up` by the shared observer.
-   Cancel the lift-and-blur that class normally brings: the tiles inside are
-   what animates, and a track that faded in as a block would drag them with it. */
-[data-js] .approach-track.reveal {
-  opacity: 1;
-  transform: none;
-  filter: none;
+.approach-steps-nav {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
 }
-.approach-tile {
+
+.approach-step-btn {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
-  padding: 1.6rem 1.8rem;
-  border: 1px solid var(--line-dark);
-  /* Each tile carries its own dark fill rather than letting the photograph
-     through, so a pillar reads the same whichever frame is behind it. Solid
-     from the moment it lands: a tile is either off-frame or fully arrived,
-     never a half-transparent ghost sitting over the skyline. */
-  background: var(--pine-deep);
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.2rem;
+  opacity: 0.4;
+  transition: opacity var(--t-base) var(--ease);
 }
-/* Waiting tiles are parked past the right edge of the panel — far enough that
-   the whole tile clears the frame, since `.approach-pin` clips it. They slide
-   in one at a time as the scroll brings each one up.
 
-   Behind [data-js] like every other motion on the site: something has to put
-   the tiles back, and with scripting unavailable nothing would. The plain
-   markup is a legible stacked list, which is the right thing to fall back to. */
-[data-js] .approach-tile {
-  transform: translateX(calc(100% + var(--gutter) + 2rem));
-  opacity: 0;
-  transition:
-    opacity var(--t-slow) var(--ease),
-    transform var(--t-slow) var(--ease),
-    border-color var(--t-slow) var(--ease);
+.approach-step-btn:hover,
+.approach-step-btn.active {
+  opacity: 1;
 }
-/* Arrived — current and already-passed tiles hold the same solid treatment;
-   only the border marks which one the copy is talking about.
 
-   Scoped to the pinned breakpoint, the same one the component checks before
-   it tracks scroll at all. Below it nothing ever advances the active index,
-   so the first tile would arrive on its own and the other three would wait
-   for a signal that never comes; there, `.up` on the track drives all four. */
-@media (min-width: 901px) {
-  [data-js] .approach-tile.on,
-  [data-js] .approach-tile.past {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.approach-step-bar {
+  width: 24px;
+  height: 2px;
+  background: rgba(250,249,246,0.25);
+  border-radius: 2px;
+  transition: all var(--t-base) var(--ease);
 }
-.approach-tile.on { border-color: var(--signal); }
-.approach-num {
+
+.approach-step-btn.active .approach-step-bar {
+  width: 42px;
+  background: var(--signal);
+}
+
+.approach-step-num {
   font-family: var(--mono);
   font-size: 0.66rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
   color: var(--signal);
-  flex-shrink: 0;
 }
-.approach-label {
+
+/* ── All cards in one single line, enlarging on scroll ── */
+.approach-cards-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1.25rem;
+  width: 100%;
+  flex: 1;
+  max-height: calc(100% - 140px);
+  min-height: 380px;
+}
+
+.approach-card {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+  background: var(--pine-deep);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    flex 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+  will-change: flex, transform;
+  outline: none;
+}
+
+.approach-card:hover {
+  border-color: rgba(43,168,144,0.5);
+}
+
+.approach-card.enlarged {
+  flex: 2.3;
+  border-color: var(--signal);
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 50px -10px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(43,168,144,0.35);
+}
+
+/* Card background image and scrim */
+.approach-card-image-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.approach-card-image-wrap img,
+.approach-card-image-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  transform: scale(1);
+  filter: brightness(0.88);
+  transition:
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.45s ease,
+    filter 0.45s ease;
+}
+
+.approach-card.enlarged .approach-card-image-wrap img,
+.approach-card.enlarged .approach-card-image-wrap video {
+  opacity: 0.75;
+  transform: scale(1.08);
+  filter: brightness(1);
+}
+
+.approach-card-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,41,33,0.96) 0%, rgba(10,41,33,0.65) 50%, rgba(10,41,33,0.35) 100%);
+  pointer-events: none;
+  transition: background var(--t-base) var(--ease);
+}
+
+.approach-card.enlarged .approach-card-scrim {
+  background: linear-gradient(to top, rgba(10,41,33,0.94) 0%, rgba(10,41,33,0.48) 55%, rgba(10,41,33,0.2) 100%);
+}
+
+/* Card content */
+.approach-card-inner {
+  position: relative;
+  z-index: 1;
+  padding: 1.8rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  pointer-events: none;
+}
+
+.approach-card-top,
+.approach-card-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.approach-card-num {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(250,249,246,0.65);
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgba(250,249,246,0.18);
+  border-radius: 2px;
+  background: rgba(10,41,33,0.65);
+  backdrop-filter: blur(6px);
+  transition: all var(--t-base) var(--ease);
+}
+
+.approach-card.enlarged .approach-card-num {
+  color: var(--signal);
+  border-color: rgba(43,168,144,0.5);
+  background: rgba(15,61,51,0.85);
+}
+
+.approach-card-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all var(--t-base) var(--ease);
+}
+
+.approach-card.enlarged .approach-card-dot {
+  background: var(--signal);
+  box-shadow: 0 0 8px var(--signal);
+}
+
+.approach-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.approach-card-title {
   font-family: var(--serif);
   font-size: 1.25rem;
   font-weight: 500;
-  letter-spacing: -0.01em;
   color: var(--paper);
-  line-height: 1.3;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  transition: all var(--t-base) var(--ease);
+}
+
+.approach-card.enlarged .approach-card-title {
+  font-size: 1.45rem;
+  color: #FFFFFF;
+}
+
+.approach-card-desc {
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(8px);
+  overflow: hidden;
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(250,249,246,0.85);
+  transition:
+    opacity 0.4s ease,
+    max-height 0.5s ease,
+    transform 0.4s ease;
+}
+
+.approach-card.enlarged .approach-card-desc {
+  opacity: 1;
+  max-height: 120px;
+  transform: translateY(0);
+  margin-top: 0.4rem;
+}
+
+.approach-card-active-line {
+  width: 0;
+  height: 2px;
+  background: var(--signal);
+  margin-top: 0.5rem;
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.approach-card.enlarged .approach-card-active-line {
+  width: 36px;
 }
 
 /* ── INTRO STRIP ───────────────────────── */
@@ -448,42 +645,65 @@
     padding: 3.5rem var(--gutter);
   }
 
-  /* No pinning on a phone: a sticky panel that eats five screens of scroll
-     is hostile on a touch device, and the tiles read perfectly well as a
-     plain list. The component checks the same breakpoint before it tracks
-     scroll at all. */
+  /* Mobile approach section: single-line horizontal swipe track */
   .approach { height: auto; }
   .approach-pin {
     position: static;
     height: auto;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    overflow: visible;
     padding: 3.5rem var(--gutter);
+    gap: 2rem;
   }
-  .approach-pin::before { background: linear-gradient(to bottom, var(--navy), rgba(15,61,51,0.9)); }
-  .approach-head { max-width: none; }
-  .approach-progress { display: none; }
-  .approach-track { gap: 0.75rem; }
-  .approach-tile { padding: 1.2rem 1.3rem; }
-  /* Nothing is driving `.on` here — the component stops tracking scroll below
-     this breakpoint — so the highlight would sit on the first tile forever,
-     reading as a selection that never moves. All four are equal on a phone. */
-  .approach-tile.on { border-color: var(--line-dark); }
-
-  /* The tiles still arrive from the right, just triggered by the track coming
-     into view rather than by a pinned scroll. Same motion, no scroll hijack:
-     pinning five screens of runway under a thumb is the thing that made this
-     section hostile on touch in the first place. */
-  [data-js] .approach-track.up .approach-tile {
-    transform: translateX(0);
+  .approach-pin::before { background: linear-gradient(to bottom, var(--navy), rgba(15,61,51,0.95)); }
+  .approach-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 0;
+  }
+  .approach-header-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .approach-steps-nav {
+    display: none;
+  }
+  .approach-cards-row {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    width: calc(100% + 2 * var(--gutter));
+    margin-left: calc(-1 * var(--gutter));
+    padding: 0.5rem var(--gutter) 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    min-height: 0;
+    max-height: none;
+  }
+  .approach-cards-row::-webkit-scrollbar {
+    display: none;
+  }
+  .approach-card {
+    flex: 0 0 82vw;
+    max-width: 320px;
+    min-height: 380px;
+    scroll-snap-align: start;
+    transform: none;
+  }
+  .approach-card.enlarged {
+    flex: 0 0 82vw;
+    transform: none;
+  }
+  .approach-card-desc {
     opacity: 1;
+    max-height: 140px;
+    transform: none;
+    margin-top: 0.4rem;
   }
-  [data-js] .approach-track.up .approach-tile:nth-child(1) { transition-delay: 0ms; }
-  [data-js] .approach-track.up .approach-tile:nth-child(2) { transition-delay: 110ms; }
-  [data-js] .approach-track.up .approach-tile:nth-child(3) { transition-delay: 220ms; }
-  [data-js] .approach-track.up .approach-tile:nth-child(4) { transition-delay: 330ms; }
-  [data-js] .approach-track.up .approach-tile:nth-child(5) { transition-delay: 440ms; }
-  .approach-label { font-size: 1.05rem; }
+  .approach-card-active-line {
+    width: 36px;
+  }
 
   .areas-preview  { padding: 3.5rem var(--gutter); }
   .areas-grid-home { grid-template-columns: 1fr; gap: 1.2rem; }
@@ -518,7 +738,18 @@
 @media (prefers-reduced-motion: reduce) {
   .approach { height: auto; }
   .approach-pin { position: static; height: auto; }
-  [data-js] .approach-tile,
-  [data-js] .approach-tile.past,
-  [data-js] .approach-tile.on { opacity: 1; transform: none; transition: none; }
+  .approach-card,
+  .approach-card.enlarged {
+    transform: none;
+    transition: none;
+  }
+  .approach-card-image-wrap img,
+  .approach-card-image-wrap video {
+    transition: none;
+  }
+  .approach-card-desc {
+    opacity: 1;
+    max-height: none;
+    transform: none;
+  }
 }

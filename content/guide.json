@@ -1,0 +1,203 @@
+{
+  "hero": {
+    "eyebrow": "INVESTOR & BUYER GUIDE 2025–2026",
+    "headline": "The Comprehensive Dubai & UAE Real Estate Investment Guide",
+    "subhead": "A definitive, data-led handbook covering the off-plan acquisition lifecycle, RERA Escrow protections, DLD fee structures, tax advantages, and 10-Year Golden Visa qualification.",
+    "lastUpdated": "March 2025",
+    "readingTime": "12 min read",
+    "image": "/images/uae-skyline-hero.jpg"
+  },
+  "tableOfContents": [
+    { "id": "why-dubai", "title": "1. Why Dubai: Macro Economics & Tax Architecture" },
+    { "id": "acquisition-lifecycle", "title": "2. The 5-Step Property Purchase Lifecycle" },
+    { "id": "fee-structure", "title": "3. DLD & Transaction Fee Architecture" },
+    { "id": "escrow-protections", "title": "4. RERA Escrow Law No. 8 of 2007 Safeguards" },
+    { "id": "golden-visa", "title": "5. UAE 10-Year Golden Visa Requirements" },
+    { "id": "off-plan-vs-secondary", "title": "6. Off-Plan vs. Secondary Market Analysis" },
+    { "id": "faq", "title": "7. Frequently Asked Questions" }
+  ],
+  "macroAdvantages": [
+    {
+      "metric": "0%",
+      "label": "Personal Tax",
+      "description": "Zero capital gains tax, zero rental income tax, and zero personal wealth or inheritance tax on UAE real estate holdings."
+    },
+    {
+      "metric": "AED 2M",
+      "label": "Golden Visa Threshold",
+      "description": "Qualifies international buyers for a renewable 10-year UAE residency visa covering family and domestic staff."
+    },
+    {
+      "metric": "100%",
+      "label": "Foreign Freehold Ownership",
+      "description": "Full absolute ownership rights granted to foreign nationals in designated freehold zones across Dubai, Abu Dhabi, and Ras Al Khaimah."
+    },
+    {
+      "metric": "USD Peg",
+      "label": "Currency Stability",
+      "description": "AED pegged to the US Dollar at 3.6725 since 1997, shielding global capital from currency volatility."
+    }
+  ],
+  "processSteps": [
+    {
+      "step": "01",
+      "title": "Strategy & Asset Allocation",
+      "timeline": "Week 1",
+      "summary": "Data-led screening based on target gross yields, capital appreciation vectors, developer balance sheet strength, and delivery horizons.",
+      "deliverables": [
+        "Independent micro-market supply & demand audit",
+        "Comparable historical transactions analysis",
+        "Payment plan cash-flow stress test"
+      ]
+    },
+    {
+      "step": "02",
+      "title": "Reservation & Expression of Interest (EOI)",
+      "timeline": "Day 1 – 3",
+      "summary": "Securing priority unit allocation with an initial booking token (typically AED 20,000 – AED 50,000 or 5%–10% of purchase price) and passport verification.",
+      "deliverables": [
+        "Developer Unit Reservation Agreement",
+        "Official receipt against developer Escrow account",
+        "KYC / AML compliance clearance"
+      ]
+    },
+    {
+      "step": "03",
+      "title": "Sales & Purchase Agreement (SPA) & Oqood",
+      "timeline": "Week 2 – 4",
+      "summary": "Execution of the tripartite binding contract and formal pre-registration with the Dubai Land Department (DLD) via the Oqood system.",
+      "deliverables": [
+        "Notarized developer Sales & Purchase Agreement",
+        "Official DLD Oqood Pre-Registration Certificate",
+        "Payment of 4% DLD registration fee + admin fees"
+      ]
+    },
+    {
+      "step": "04",
+      "title": "Milestone-Linked Escrow Payments",
+      "timeline": "Construction Duration (2–4 Years)",
+      "summary": "Staged payments wired directly into the project's RERA-regulated bank escrow account, disbursed only against certified engineering milestones.",
+      "deliverables": [
+        "Independent RERA site inspection progress reports",
+        "Audited milestone release approvals",
+        "Periodic photo and video construction telemetry"
+      ]
+    },
+    {
+      "step": "05",
+      "title": "Snagging, Handover & Title Deed Issuance",
+      "timeline": "Completion Date",
+      "summary": "Rigorous architectural snagging inspection, settlement of final completion instalment, developer handover pack, and conversion of Oqood into Title Deed.",
+      "deliverables": [
+        "Comprehensive architectural defect/snagging report",
+        "Developer Handover & Keys Clearance",
+        "Dubai Land Department Final Title Deed"
+      ]
+    }
+  ],
+  "feeMatrix": [
+    {
+      "feeName": "Dubai Land Department (DLD) Transfer Fee",
+      "payableTo": "Dubai Land Department",
+      "rate": "4% of Property Value",
+      "notes": "Standard statutory fee. On off-plan units, processed as Oqood registration fee."
+    },
+    {
+      "feeName": "DLD Administrative / Knowledge & Innovation Fee",
+      "payableTo": "Dubai Land Department",
+      "rate": "AED 580 (Off-plan) / AED 4,200 (Title Deed)",
+      "notes": "Standard governmental administration surcharge."
+    },
+    {
+      "feeName": "Registration Trustee Office Fee",
+      "payableTo": "DLD Authorised Trustee",
+      "rate": "AED 2,000 + VAT (< AED 500k) / AED 4,000 + VAT (≥ AED 500k)",
+      "notes": "Applicable on secondary resale transfers; waived on direct developer off-plan purchases."
+    },
+    {
+      "feeName": "Real Estate Brokerage Fee",
+      "payableTo": "Licensed Real Estate Broker",
+      "rate": "0% for Buyer on Off-Plan / 2% + 5% VAT on Secondary",
+      "notes": "Off-plan acquisitions are 100% commission-free to the buyer (compensated directly by developer)."
+    },
+    {
+      "feeName": "Developer NOC (No Objection Certificate) Fee",
+      "payableTo": "Master Developer",
+      "rate": "AED 1,000 – AED 5,000 + 5% VAT",
+      "notes": "Only applicable during secondary resales prior to handover."
+    },
+    {
+      "feeName": "Annual Service Charges",
+      "payableTo": "RERA-Approved Owners Association Management",
+      "rate": "AED 12 – AED 35 / sq.ft annually",
+      "notes": "Strictly regulated via the RERA Mollak system based on building amenities and location."
+    }
+  ],
+  "escrowLaws": {
+    "title": "The Statutory RERA Escrow Framework (Law No. 8 of 2007)",
+    "description": "Dubai operates one of the most rigorously regulated off-plan property regimes globally. Every licensed off-plan project must adhere to strict legislative safeguards enforced by the Real Estate Regulatory Agency (RERA):",
+    "points": [
+      {
+        "heading": "Dedicated Ring-Fenced Escrow Accounts",
+        "text": "Developers are legally prohibited from receiving buyer funds into corporate operating accounts. All funds must be deposited into an individual project Escrow account held at an approved UAE bank."
+      },
+      {
+        "heading": "Milestone-Gated Fund Releases",
+        "text": "The escrow agent may only release funds to the developer after independent RERA engineering inspectors certify verifiable construction completion percentages."
+      },
+      {
+        "heading": "20% Land and Construction Guarantee",
+        "text": "Developers must own 100% of the project plot free of debt and lodge a 20% financial guarantee or deposit 20% of construction value in cash before marketing permits are issued."
+      },
+      {
+        "heading": "5% Retention Guarantee",
+        "text": "A minimum 5% retention sum is held back in escrow for one full year following project handover to protect buyers against structural defects."
+      }
+    ]
+  },
+  "goldenVisa": {
+    "title": "UAE 10-Year Golden Visa Through Real Estate",
+    "subtitle": "Long-term stability, self-sponsored residency, and global mobility for international investors.",
+    "criteria": [
+      "Minimum qualifying property valuation of AED 2,000,000 (~USD 545,000).",
+      "Applicable to one or multiple properties (combined total value ≥ AED 2M).",
+      "Off-plan purchases qualify provided total investment meets AED 2M and developer issues qualifying milestone documentation.",
+      "Mortgaged properties qualify provided the equity paid to the bank/developer equals or exceeds AED 2,000,000.",
+      "10-year renewable residency without the requirement of continuous UAE stay (the standard 6-month stay rule is waived).",
+      "Full family sponsorship: spouse, children of any age, and domestic staff."
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Can foreign non-residents buy freehold real estate in Dubai?",
+      "a": "Yes. Under Regulation No. 3 of 2006, foreign nationals of any nationality can purchase freehold real estate with absolute, perpetual ownership in designated investment zones across Dubai, Abu Dhabi, and Ras Al Khaimah. No local partner or UAE residency is required."
+    },
+    {
+      "q": "What is an Oqood certificate and how does it differ from a Title Deed?",
+      "a": "Oqood is an Arabic word meaning 'contracts'. It is the official interim registration system administered by the Dubai Land Department (DLD) for off-plan properties during construction. Once the development is completed and handed over, the Oqood certificate is formally converted into a final permanent Title Deed."
+    },
+    {
+      "q": "Are there any annual property taxes or capital gains taxes in Dubai?",
+      "a": "No. The UAE levies zero annual property tax, zero capital gains tax on real estate sales, and zero personal income tax on rental yields. The only standard transactional cost is the one-time 4% Dubai Land Department transfer fee at acquisition."
+    },
+    {
+      "q": "Do I pay brokerage commission when purchasing an off-plan property?",
+      "a": "No. When acquiring an off-plan development through RealTerra, our advisory services, developer vetting, and transaction handling are completely free of charge to the buyer. Brokerage fees are settled directly by the master developer under RERA regulations."
+    },
+    {
+      "q": "What safeguards exist if an off-plan developer delays completion?",
+      "a": "Under UAE Federal Law and RERA guidelines, standard contracts include a permitted grace period (typically 12 months). Beyond this, if unjustified delays persist, RERA intervenes through its project liquidation committee, with escrow funds safeguarded for contractor reassignment or investor reimbursement."
+    }
+  ],
+  "cta": {
+    "eyebrow": "BESPOKE ACQUISITION ADVISORY",
+    "headline": "Plan Your Dubai Real Estate Strategy with RealTerra",
+    "subhead": "Request an institutional financial pro-forma model, curated off-plan allocations, and comprehensive legal structuring from our advisory desk.",
+    "buttonText": "Consult an Investment Advisor",
+    "buttonHref": "/contact"
+  },
+  "seo": {
+    "title": "Dubai Real Estate Investor Guide 2025 | Off-Plan Laws, DLD Fees & Golden Visa",
+    "description": "Comprehensive guide to investing in Dubai and UAE real estate. Master off-plan purchase steps, RERA Escrow Law No. 8/2007 protections, 4% DLD fees, and the AED 2M Golden Visa rules."
+  }
+}

@@ -1,55 +1,92 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import Media from './Media';
+
+const DEFAULT_PILLARS = [
+  {
+    tag: '01',
+    title: 'Thesis-Driven Selection',
+    description: 'Macro trends, micro supply dynamics, and exit liquidity documented before any capital is committed.',
+    image: '/images/dubai-architecture.jpg',
+  },
+  {
+    tag: '02',
+    title: 'Infrastructure Alpha',
+    description: 'We map infrastructure approvals, zone reclassifications, and transit pipelines before market repricing.',
+    image: '/images/dubai-south.jpg',
+  },
+  {
+    tag: '03',
+    title: 'Developer Due Diligence',
+    description: 'Escrow compliance, completion track records, and build quality systematically audited across past phases.',
+    image: '/images/developer-analysis.jpg',
+  },
+  {
+    tag: '04',
+    title: 'Portfolio Architecture',
+    description: 'Balanced exposure across high-yield assets, capital growth corridors, and off-plan positions.',
+    image: '/images/luxury-development.jpg',
+  },
+];
 
 /**
- * Scroll-pinned tile slider for the four pillars.
+ * Scroll-pinned interactive card row for the Four Pillars.
  *
- * The section sticks to the viewport while the page scrolls through it, and
- * each scrolled screenful advances one tile. It is driven by the container's
- * own scroll position rather than by a wheel handler: hijacking the wheel
- * breaks trackpad momentum, keyboard paging and every assistive technology
- * that scrolls by other means, and there is no way to get out of it if the
- * script mis-fires.
- *
- * Below the breakpoint — and whenever motion is reduced — the pin is dropped
- * entirely by CSS and the tiles render as a plain stacked list. That is the
- * fallback the markup is written for, so nothing depends on the effect
- * running.
+ * All cards are displayed simultaneously in a single horizontal row.
+ * As the user scrolls through the pinned runway, the active card smoothly
+ * enlarges with flex expansion, zoom, and descriptive insight.
  */
 export default function ApproachSlider({ pillars, eyebrow, headline, subtext, media, children }) {
-  const items = (pillars || []).filter(Boolean);
+  const items = useMemo(() => {
+    const raw = (pillars || []).filter(Boolean);
+    if (!raw.length) return DEFAULT_PILLARS;
+    return raw.map((item, i) => {
+      const fallback = DEFAULT_PILLARS[i % DEFAULT_PILLARS.length];
+      if (typeof item === 'object' && item !== null) {
+        return {
+          tag: item.tag || String(i + 1).padStart(2, '0'),
+          title: item.title || item.name || fallback.title,
+          description: item.description || fallback.description,
+          image: item.image || fallback.image,
+        };
+      }
+      return {
+        tag: String(i + 1).padStart(2, '0'),
+        title: String(item),
+        description: fallback.description,
+        image: fallback.image,
+      };
+    });
+  }, [pillars]);
+
   const trackRef = useRef(null);
-  const [active, setActive] = useState(0);
+  const [scrollActive, setScrollActive] = useState(0);
+  const [hovered, setHovered] = useState(null);
+
+  const active = hovered !== null ? hovered : scrollActive;
 
   useEffect(() => {
     const el = trackRef.current;
     if (!el || items.length < 2) return;
 
-    // The pin is a CSS concern; if it is not in effect (mobile, reduced
-    // motion) there is no progress to track and no listener worth attaching.
-    const pinned = () =>
+    const isPinned = () =>
       window.matchMedia('(min-width: 901px)').matches &&
       !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     let frame = 0;
     const update = () => {
       frame = 0;
-      if (!pinned()) return;
+      if (!isPinned()) return;
       const rect = el.getBoundingClientRect();
-      // The panel inside sticks at `top: var(--nav-h)`, so the run starts
-      // when the section's top reaches that line and ends when its bottom
-      // does. Measuring against the raw viewport instead would offset every
-      // tile change by the height of the nav.
       const navH = parseFloat(
         getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
       ) || 0;
       const travel = rect.height - (window.innerHeight - navH);
       if (travel <= 0) return;
       const progress = Math.min(Math.max((navH - rect.top) / travel, 0), 1);
-      // `min` rather than a plain floor: at progress exactly 1 the floor
-      // would index one past the last tile.
-      setActive(Math.min(items.length - 1, Math.floor(progress * items.length)));
+      const nextIdx = Math.min(items.length - 1, Math.floor(progress * items.length));
+      setScrollActive(nextIdx);
     };
 
     const onScroll = () => {
@@ -72,48 +109,90 @@ export default function ApproachSlider({ pillars, eyebrow, headline, subtext, me
     <section
       className="approach"
       ref={trackRef}
-      /* The scroll runway: one screen per tile, plus one to read the last.
-         Set inline because it depends on how many pillars the CMS holds. */
       style={{ '--approach-steps': items.length }}
     >
       <div className="approach-pin">
-        {/* Rendered on the server and handed in, so next/image and the video
-            element stay out of this client bundle. */}
-        {media && <div className="approach-media">{media}</div>}
-        <div className="approach-head">
-          {eyebrow && <p className="eyebrow eyebrow-dark">{eyebrow}</p>}
-          {headline && <h2>{headline}</h2>}
-          {subtext && <p className="approach-sub">{subtext}</p>}
-          <div className="approach-progress" aria-hidden="true">
-            {items.map((label, i) => (
-              <span
-                key={`${label}-${i}`}
-                className={`approach-dot${i === active ? ' on' : ''}`}
-              />
-            ))}
+        {/* Ambient background photo */}
+        {media && <div className="approach-bg-media">{media}</div>}
+
+        {/* Section Header */}
+        <div className="approach-header">
+          <div className="approach-header-left">
+            {eyebrow && <p className="eyebrow eyebrow-dark">{eyebrow}</p>}
+            {headline && <h2 className="approach-headline">{headline}</h2>}
+            {subtext && <p className="approach-sub">{subtext}</p>}
           </div>
-          {children}
+
+          <div className="approach-header-right">
+            {children}
+            {/* Direct step navigation tabs */}
+            <div className="approach-steps-nav" aria-label="Pillar selectors">
+              {items.map((item, i) => (
+                <button
+                  key={`${item.tag}-${i}`}
+                  type="button"
+                  className={`approach-step-btn${i === active ? ' active' : ''}`}
+                  onClick={() => setScrollActive(i)}
+                  aria-label={`Select pillar ${item.tag}: ${item.title}`}
+                >
+                  <span className="approach-step-bar" />
+                  <span className="approach-step-num">{item.tag}</span>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* `reveal` is here only to collect the `.up` class when the track
-            scrolls into view — that is what starts the tiles on a phone,
-            where there is no pinned scroll to advance them. The track itself
-            must not move, so the reveal transform is cancelled in CSS. */}
-        <ol
-          className="approach-track reveal"
-          style={{ '--approach-active': active }}
-        >
-          {items.map((label, i) => (
-            <li
-              key={`${label}-${i}`}
-              className={`approach-tile${i === active ? ' on' : ''}${i < active ? ' past' : ''}`}
-              aria-current={i === active ? 'step' : undefined}
-            >
-              <span className="approach-num">{String(i + 1).padStart(2, '0')}</span>
-              <span className="approach-label">{label}</span>
-            </li>
-          ))}
-        </ol>
+        {/* Cards Row — all shown simultaneously in one line, enlarging on scroll */}
+        <div className="approach-cards-row">
+          {items.map((item, i) => {
+            const isEnlarged = i === active;
+            return (
+              <div
+                key={`${item.title}-${i}`}
+                className={`approach-card${isEnlarged ? ' enlarged' : ''}`}
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => setScrollActive(i)}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setScrollActive(i);
+                  }
+                }}
+                role="button"
+                aria-pressed={isEnlarged}
+                aria-label={`${item.tag} ${item.title}`}
+              >
+                {/* Background image */}
+                <div className="approach-card-image-wrap">
+                  <Media
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 900px) 75vw, 40vw"
+                  />
+                  <div className="approach-card-scrim" />
+                </div>
+
+                {/* Foreground content */}
+                <div className="approach-card-inner">
+                  <div className="approach-card-badge">
+                    <span className="approach-card-num">{item.tag}</span>
+                    <span className="approach-card-dot" />
+                  </div>
+
+                  <div className="approach-card-text">
+                    <h3 className="approach-card-title">{item.title}</h3>
+                    <p className="approach-card-desc">{item.description}</p>
+                    <div className="approach-card-active-line" />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

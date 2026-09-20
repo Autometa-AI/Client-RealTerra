@@ -1,0 +1,598 @@
+/* Guide Page Styles */
+.guide-page {
+  background: var(--canvas, #fbfbfa);
+  color: var(--ink, #111827);
+  font-family: var(--font-inter, sans-serif);
+}
+
+.guide-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.guide-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+}
+
+.guide-section {
+  padding: 5rem 1.5rem;
+  border-bottom: 1px solid var(--line, #e5e7eb);
+}
+
+.guide-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.guide-section-header {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.guide-section-tag {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--signal, #2ba890);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.guide-section-header h2 {
+  font-family: var(--font-newsreader, serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--pine-deep, #0a2921);
+  margin: 0 0 1rem 0;
+}
+
+.guide-section-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ink-subtle, #4b5563);
+  margin: 0;
+}
+
+/* Macro Grid */
+.guide-macro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.guide-macro-card {
+  background: #ffffff;
+  border: 1px solid var(--line, #e5e7eb);
+  padding: 2.25rem 1.75rem;
+  border-radius: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guide-macro-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--signal, #2ba890);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.guide-macro-metric {
+  display: block;
+  font-family: var(--font-newsreader, serif);
+  font-size: 2.75rem;
+  color: var(--pine-deep, #0a2921);
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.guide-macro-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink, #111827);
+  margin: 0 0 0.5rem 0;
+}
+
+.guide-macro-text {
+  font-size: 0.925rem;
+  color: var(--ink-subtle, #4b5563);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Steps List */
+.guide-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.guide-step-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  background: #ffffff;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 768px) {
+  .guide-step-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.guide-step-aside {
+  background: var(--sand, #f6f5f0);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--line, #e5e7eb);
+}
+
+.guide-step-num {
+  font-family: var(--font-newsreader, serif);
+  font-size: 2.5rem;
+  color: var(--pine-deep, #0a2921);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.guide-step-timeline {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--ink-subtle, #4b5563);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+}
+
+.guide-step-content {
+  padding: 2rem 2.5rem;
+}
+
+.guide-step-title {
+  font-family: var(--font-newsreader, serif);
+  font-size: 1.5rem;
+  color: var(--pine-deep, #0a2921);
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.guide-step-summary {
+  font-size: 0.975rem;
+  line-height: 1.6;
+  color: var(--ink-subtle, #4b5563);
+  margin: 0 0 1.5rem 0;
+}
+
+.guide-deliverables-label {
+  display: block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--signal, #2ba890);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.guide-step-deliverables ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.65rem;
+}
+
+.guide-step-deliverables li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--ink, #111827);
+}
+
+.guide-step-deliverables svg {
+  color: var(--signal, #2ba890);
+  flex-shrink: 0;
+}
+
+/* Fee Table */
+.guide-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line, #e5e7eb);
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  margin-bottom: 2.5rem;
+}
+
+.guide-fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.925rem;
+}
+
+.guide-fee-table th {
+  background: var(--sand, #f6f5f0);
+  color: var(--pine-deep, #0a2921);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid var(--line, #e5e7eb);
+}
+
+.guide-fee-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line, #e5e7eb);
+  vertical-align: middle;
+}
+
+.guide-fee-table tr:last-child td {
+  border-bottom: none;
+}
+
+.guide-fee-name {
+  font-weight: 600;
+  color: var(--ink, #111827);
+  min-width: 200px;
+}
+
+.guide-fee-party {
+  color: var(--ink-subtle, #4b5563);
+}
+
+.guide-rate-pill {
+  display: inline-block;
+  background: #e6f7f3;
+  color: #0a6854;
+  font-weight: 600;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.825rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.guide-fee-notes {
+  color: var(--ink-subtle, #4b5563);
+  font-size: 0.85rem;
+}
+
+/* Calculator Callout */
+.guide-calculator-callout {
+  background: linear-gradient(135deg, #0a2921 0%, #154734 100%);
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.guide-calculator-callout h3 {
+  font-family: var(--font-newsreader, serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+.guide-calculator-callout p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 600px;
+}
+
+.guide-calc-btn {
+  display: inline-block;
+  background: var(--signal, #2ba890);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.925rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.guide-calc-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Escrow Box */
+.guide-escrow-card {
+  background: #ffffff;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 16px;
+  padding: 3.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 768px) {
+  .guide-escrow-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.guide-escrow-badge {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #eaf0ed;
+  color: var(--pine-deep, #0a2921);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.guide-escrow-header h2 {
+  font-family: var(--font-newsreader, serif);
+  font-size: 2.25rem;
+  color: var(--pine-deep, #0a2921);
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.guide-escrow-header p {
+  color: var(--ink-subtle, #4b5563);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 0 2.5rem 0;
+}
+
+.guide-escrow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.guide-escrow-item {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.guide-escrow-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #e6f7f3;
+  color: var(--signal, #2ba890);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.guide-escrow-item h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink, #111827);
+  margin: 0 0 0.5rem 0;
+}
+
+.guide-escrow-item p {
+  font-size: 0.9rem;
+  color: var(--ink-subtle, #4b5563);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Golden Visa Layout */
+.guide-visa-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  background: #ffffff;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 16px;
+  padding: 3.5rem;
+}
+
+@media (max-width: 850px) {
+  .guide-visa-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.guide-visa-left h2 {
+  font-family: var(--font-newsreader, serif);
+  font-size: 2.25rem;
+  color: var(--pine-deep, #0a2921);
+  font-weight: 400;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.guide-visa-sub {
+  color: var(--ink-subtle, #4b5563);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.guide-visa-stat-box {
+  background: var(--sand, #f6f5f0);
+  border: 1px solid var(--line, #e5e7eb);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.guide-visa-stat-val {
+  display: block;
+  font-family: var(--font-mono, monospace);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--pine-deep, #0a2921);
+  margin-bottom: 0.25rem;
+}
+
+.guide-visa-stat-lbl {
+  font-size: 0.85rem;
+  color: var(--ink-subtle, #4b5563);
+}
+
+.guide-visa-right h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink, #111827);
+  margin: 0 0 1.5rem 0;
+}
+
+.guide-visa-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.guide-visa-list li {
+  display: flex;
+  gap: 0.85rem;
+  font-size: 0.925rem;
+  color: var(--ink, #111827);
+  line-height: 1.5;
+}
+
+.guide-visa-bullet {
+  color: var(--signal, #2ba890);
+  font-weight: bold;
+}
+
+/* FAQ Grid */
+.guide-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.guide-faq-card {
+  background: #ffffff;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.guide-faq-q {
+  font-family: var(--font-newsreader, serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--pine-deep, #0a2921);
+  margin: 0 0 0.85rem 0;
+  line-height: 1.35;
+}
+
+.guide-faq-a {
+  font-size: 0.925rem;
+  color: var(--ink-subtle, #4b5563);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Section */
+.guide-cta-section {
+  padding: 6rem 1.5rem;
+  background: var(--pine-deep, #0a2921);
+  color: #ffffff;
+  text-align: center;
+}
+
+.guide-cta-card {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.guide-cta-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--signal, #2ba890);
+  margin-bottom: 1rem;
+}
+
+.guide-cta-headline {
+  font-family: var(--font-newsreader, serif);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 1.25rem 0;
+}
+
+.guide-cta-subhead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 2.5rem 0;
+}
+
+.guide-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.guide-cta-btn {
+  display: inline-block;
+  background: var(--signal, #2ba890);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.guide-cta-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.guide-cta-link {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.guide-cta-link:hover {
+  border-color: #ffffff;
+}

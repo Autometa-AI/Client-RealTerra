@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "eyebrow": "INSTITUTIONAL BROKERAGE & ADVISORY",
+    "headline": "Data-Led Real Estate Advisory Across the Asset Lifecycle",
+    "subhead": "RealTerra acts as an independent fiduciary for private investors, family offices, and cross-border funds navigating prime residential and commercial opportunities across Dubai and the UAE.",
+    "image": "/images/developer-analysis.jpg"
+  },
+  "intro": {
+    "tag": "FIDUCIARY DISCIPLINE",
+    "headline": "Beyond Standard Brokerage: An Institutional Mindset",
+    "lead": "Traditional real estate brokerage in Dubai is transactional and developer-commission aligned. RealTerra operates on an advisory model: we treat every acquisition as an institutional capital allocation, screening off-plan and secondary inventory through rigorous cash-flow stress tests, developer balance sheet audits, and yield sensitivity modeling."
+  },
+  "services": [
+    {
+      "id": "portfolio-architecture",
+      "number": "01",
+      "title": "Portfolio Architecture & Capital Allocation",
+      "tagline": "Diversified multi-asset strategies engineered for risk-adjusted returns.",
+      "description": "We build institutional investment mandates tailored to capital horizons, cash-flow requirements, and risk parameters. Strategies span high-yield urban corridors (Business Bay, Meydan), super-prime branded residences, and emerging speculative catalysts like Al Marjan Island.",
+      "capabilities": [
+        "Internal Rate of Return (IRR) & Equity Multiple financial modeling",
+        "Micro-market supply pipeline and absorption risk analysis",
+        "Geographic diversification across Dubai, Ras Al Khaimah, and Abu Dhabi"
+      ]
+    },
+    {
+      "id": "developer-due-diligence",
+      "number": "02",
+      "title": "Developer Due Diligence & Track-Record Vetting",
+      "tagline": "Independent forensic screening before a single dirham leaves escrow.",
+      "description": "Not all developers are equal. We audit developer balance sheets, past handover delivery timelines, construction quality benchmarks, contractor dispute histories, and active RERA Escrow account statuses to ensure absolute capital security.",
+      "capabilities": [
+        "Historical handover delay ratios and defect histories",
+        "RERA Project Escrow registration and milestone verification",
+        "Main contractor financial health and construction velocity audit"
+      ]
+    },
+    {
+      "id": "off-market-allocation",
+      "number": "03",
+      "title": "Off-Market & Pre-Launch Priority Allocation",
+      "tagline": "First-tranche tier-1 pricing and prime unit stack selection.",
+      "description": "Through deep institutional relationships with tier-1 master developers (Emaar, Nakheel, Ellington, Aldar, Omniyat, Meraas), we secure early allocations in high-demand developments before public release, protecting clients against launch premiums.",
+      "capabilities": [
+        "Priority VIP pre-launch allocation access",
+        "Corner unit, sea-facing, and high-floor stack reservation",
+        "Direct developer payment plan term negotiation"
+      ]
+    },
+    {
+      "id": "conveyancing-legal",
+      "number": "04",
+      "title": "Cross-Border Conveyancing & Legal Structuring",
+      "tagline": "Frictionless international transactions backed by certified compliance.",
+      "description": "From international wire routing through central bank certified channels to power-of-attorney execution and Dubai Land Department Oqood pre-registration, our conveyancing team manages every legal nuance without requiring your physical presence in Dubai.",
+      "capabilities": [
+        "Sales & Purchase Agreement (SPA) forensic clause review",
+        "Offshore holding company & DIFC Foundation asset structuring",
+        "Cross-border currency clearing and banking facilitation"
+      ]
+    },
+    {
+      "id": "golden-visa-facilitation",
+      "number": "05",
+      "title": "UAE 10-Year Golden Visa Residency Facilitation",
+      "tagline": "Turnkey long-term sovereignty and family relocation advisory.",
+      "description": "We streamline the entire Golden Visa application directly with the Dubai Land Department (DLD Cube) and the Federal Authority for Identity, Citizenship, Customs and Port Security (ICP), managing medical fitness, Emirates ID biometric scheduling, and dependent sponsorship.",
+      "capabilities": [
+        "Direct DLD Cube expedited processing",
+        "Multi-property equity valuation aggregation",
+        "Full family and domestic employee residency sponsorship"
+      ]
+    },
+    {
+      "id": "asset-management-exit",
+      "number": "06",
+      "title": "Post-Handover Asset Management & Exit Realization",
+      "tagline": "Yield optimization, premium leasing oversight, and strategic liquidity.",
+      "description": "Our engagement extends through the asset lifecycle. We supervise architectural snagging, furnish for high-occupancy corporate leasing or short-term vacation rental, screen premium tenants, and time secondary market exits at peak market liquidity.",
+      "capabilities": [
+        "Comprehensive handover snagging inspection and defect remediation",
+        "Short-term (Airbnb/holiday home) vs. long-term yield optimization",
+        "Secondary resale syndication and institutional portfolio block sales"
+      ]
+    }
+  ],
+  "methodology": {
+    "title": "The RealTerra Advisory Framework",
+    "phases": [
+      {
+        "phase": "Phase 01",
+        "name": "Mandate Discovery",
+        "summary": "Clarifying capital objectives, target hold period (3–10 years), liquidity appetite, and expected yield profile."
+      },
+      {
+        "phase": "Phase 02",
+        "name": "Market & Asset Screening",
+        "summary": "Filtering through active and upcoming inventory using quantitative scoring algorithms and developer forensic audits."
+      },
+      {
+        "phase": "Phase 03",
+        "name": "Execution & Escrow Locking",
+        "summary": "Unit reservation, contract vetting, and secure fund routing into statutory RERA Escrow accounts."
+      },
+      {
+        "phase": "Phase 04",
+        "name": "Lifecycle Management",
+        "summary": "Ongoing construction milestone monitoring, snagging, handover, tenanting, and strategic capital redeployment."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "ENGAGE OUR ADVISORY DESK",
+    "headline": "Schedule an Institutional Real Estate Consultation",
+    "subhead": "Whether allocating private family wealth or building a high-yielding residential portfolio, partner with advisors who prioritize data over hype.",
+    "buttonText": "Schedule Private Consultation",
+    "buttonHref": "/contact"
+  },
+  "seo": {
+    "title": "Real Estate Advisory & Brokerage Services | RealTerra Global Properties Dubai",
+    "description": "Institutional real estate brokerage services in Dubai and UAE. Portfolio allocation, developer due diligence, pre-launch access, cross-border conveyancing, and Golden Visa facilitation."
+  }
+}

@@ -1,15 +1,11 @@
-import { getSupabase } from '../../../../lib/supabase';
+import { getNewsletterSubscribers } from '../../../../lib/submissions';
 import { fmtDateTime } from '../../../../lib/deep';
 import ExportCsv from '../../../../components/admin/ExportCsv';
 
 export const metadata = { title: 'Newsletter Subscribed' };
 
 export default async function Newsletter() {
-  const { data: rows, error } = await getSupabase()
-    .from('newsletter_subscribers')
-    .select('*')
-    .order('created_at', { ascending: false })
-    .limit(1000);
+  const { rows, error } = await getNewsletterSubscribers();
 
   return (
     <div>

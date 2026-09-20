@@ -1,0 +1,86 @@
+{
+  "contact_submissions": [
+    {
+      "id": "c1a00001-0000-0000-0000-000000000001",
+      "first_name": "Alexander",
+      "last_name": "Wright",
+      "email": "a.wright@mayfairholdings.co.uk",
+      "phone": "+44 20 7946 0912",
+      "interest": "Ultra-Luxury Waterfront Villas",
+      "budget": "$10M – $25M",
+      "message": "Looking for private beachfront or lagoon-facing property with immediate handover in Palm Jumeirah or Jumeirah Bay Island.",
+      "project": null,
+      "created_at": "2026-09-18T14:32:00.000Z"
+    },
+    {
+      "id": "c1a00001-0000-0000-0000-000000000002",
+      "first_name": "Elena",
+      "last_name": "Rostova",
+      "email": "elena.rostova@genevacapital.ch",
+      "phone": "+41 22 819 4000",
+      "interest": "Prime Penthouse Portfolio",
+      "budget": "$15M+",
+      "message": "Seeking full-floor penthouse opportunities in Downtown Dubai or DIFC for family office portfolio allocation.",
+      "project": null,
+      "created_at": "2026-09-15T11:15:00.000Z"
+    },
+    {
+      "id": "p1a00001-0000-0000-0000-000000000001",
+      "first_name": "Tariq",
+      "last_name": "Al-Mansoor",
+      "email": "tariq@mansoor-investments.com",
+      "phone": "+971 50 123 4567",
+      "interest": "Off-Plan Sky Duplex",
+      "budget": "AED 25M – 40M",
+      "message": "Interested in duplex sky estates with private infinity pool. Please share floor plans, pricing and payment milestones.",
+      "project": "One Za'abeel",
+      "created_at": "2026-09-19T09:45:00.000Z"
+    },
+    {
+      "id": "p1a00001-0000-0000-0000-000000000002",
+      "first_name": "Marcus",
+      "last_name": "Vanderbilt",
+      "email": "m.vanderbilt@apexglobal.sg",
+      "phone": "+65 6789 0123",
+      "interest": "Hospitality & Casino-Adjacent Units",
+      "budget": "$5M – $10M",
+      "message": "Requesting project brochure, ROI projections, and operator management details for Al Marjan Island beachfront units.",
+      "project": "Al Marjan Island",
+      "created_at": "2026-09-17T16:20:00.000Z"
+    },
+    {
+      "id": "p1a00001-0000-0000-0000-000000000003",
+      "first_name": "Sophie",
+      "last_name": "Laurent",
+      "email": "laurent.sophie@luxeprive.fr",
+      "phone": "+33 1 42 68 55 00",
+      "interest": "Waterfront Mansions",
+      "budget": "AED 18M – 30M",
+      "message": "Enquiring about the South Bay crystal lagoon villas. Would like to schedule a private VIP walkthrough when in Dubai next week.",
+      "project": "Dubai South",
+      "created_at": "2026-09-14T13:10:00.000Z"
+    }
+  ],
+  "newsletter_subscribers": [
+    {
+      "id": "n1a00001-0000-0000-0000-000000000001",
+      "email": "private-office@hassan-group.ae",
+      "created_at": "2026-09-19T18:05:00.000Z"
+    },
+    {
+      "id": "n1a00001-0000-0000-0000-000000000002",
+      "email": "investments@nordicfamily.se",
+      "created_at": "2026-09-18T10:22:00.000Z"
+    },
+    {
+      "id": "n1a00001-0000-0000-0000-000000000003",
+      "email": "david.chen@pacificwealth.hk",
+      "created_at": "2026-09-16T08:40:00.000Z"
+    },
+    {
+      "id": "n1a00001-0000-0000-0000-000000000004",
+      "email": "khalid.qasimi@emiratesholding.com",
+      "created_at": "2026-09-12T15:30:00.000Z"
+    }
+  ]
+}

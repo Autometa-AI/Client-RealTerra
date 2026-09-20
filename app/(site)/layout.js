@@ -91,6 +91,42 @@ export default async function RootLayout({ children }) {
             __html: "document.documentElement.setAttribute('data-js','')",
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'RealEstateAgent',
+              name: 'RealTerra Global Properties L.L.C',
+              legalName: 'REALTERRA GLOBAL PROPERTIES L.L.C',
+              url: 'https://realterra.ae',
+              description:
+                site.seo?.description ||
+                'Research-and-data-driven real estate brokerage in Dubai and the UAE.',
+              telephone: '+971 55 508 4911',
+              email: 'operations@realterra.ae',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Office C-50, Trade Centre 2',
+                addressLocality: 'Dubai',
+                addressRegion: 'Dubai',
+                addressCountry: 'AE',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: '25.2235',
+                longitude: '55.2842',
+              },
+              sameAs: (site.social || []).map((s) => s.url).filter(Boolean),
+              areaServed: [
+                { '@type': 'AdministrativeArea', name: 'Dubai' },
+                { '@type': 'AdministrativeArea', name: 'Ras Al Khaimah' },
+                { '@type': 'AdministrativeArea', name: 'Abu Dhabi' },
+                { '@type': 'Country', name: 'United Arab Emirates' },
+              ],
+            }),
+          }}
+        />
       </head>
       <body>
         <Nav site={site} />

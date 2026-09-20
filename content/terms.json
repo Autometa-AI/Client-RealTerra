@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "eyebrow": "REGULATORY & LEGAL TERMS",
+    "headline": "Terms of Service & RERA Brokerage Disclaimers",
+    "subhead": "The legal and regulatory framework governing client representation, property listings, off-plan marketing disclaimers, and statutory AML compliance.",
+    "lastUpdated": "March 2025"
+  },
+  "company": {
+    "legalName": "REALTERRA GLOBAL PROPERTIES L.L.C",
+    "website": "realterra.ae",
+    "tradeLicense": "1198420",
+    "reraOrn": "ORN 34821",
+    "regulator": "Dubai Land Department (DLD) / Real Estate Regulatory Agency (RERA)",
+    "address": "Office C-50, Trade Centre 2, Dubai, Dubai, 000, Dubai",
+    "email": "operations@realterra.ae",
+    "phone": "+971 55 508 4911"
+  },
+  "sections": [
+    {
+      "title": "1. Regulatory Status & Licensing",
+      "content": "REALTERRA GLOBAL PROPERTIES L.L.C is a limited liability company duly established under the laws of the Emirate of Dubai and the United Arab Emirates, holding Trade License No. 1198420 and registered with the Real Estate Regulatory Agency (RERA) under Office Registration Number (ORN) 34821.\n\nAll real estate brokerage, property advisory, and marketing operations are conducted in strict compliance with UAE Federal Law, Dubai Law No. 7 of 2006 concerning Real Property Registration in the Emirate of Dubai, and Bylaw No. 85 of 2006 Regulating the Real Estate Brokers Register in the Emirate of Dubai."
+    },
+    {
+      "title": "2. Client Representation & RERA Unified Contracts (Forms A, B & F)",
+      "content": "Under RERA regulations, formal representation and property transactions require execution of statutory electronic contracts through the Dubai REST platform:\n• Form A (Seller Agreement): Required prior to marketing or listing any real property for sale or lease.\n• Form B (Buyer Agreement): Required when retaining RealTerra to search, advise on, or inspect properties on your behalf.\n• Form F (Unified Sale Contract): The legally binding tripartite purchase agreement executed between buyer, seller, and certified broker(s).\n\nNo representation, binding reservation, or brokerage obligation shall be formed without the execution of the appropriate RERA standard agreement."
+    },
+    {
+      "title": "3. Off-Plan Information & Architectural Renderings Disclaimer",
+      "content": "All floor plans, architectural renderings, 3D visualisations, masterplan layouts, interior mock-ups, and anticipated completion dates presented on realterra.ae or in associated marketing collateral are provided directly by master and sub-developers for illustrative purposes only.\n\nDeveloper marketing materials are subject to modification, refinement, and regulatory approval by the Dubai Land Department and relevant municipal authorities without prior notice. Anticipated handover dates are projections established by the respective developers and do not constitute contractual commitments by RealTerra Global Properties L.L.C. Investors must inspect the final developer Sales & Purchase Agreement (SPA) and verified DLD project status before executing binding commitments."
+    },
+    {
+      "title": "4. Financial Modeling & Yield Projections",
+      "content": "Any return on investment (ROI), gross rental yield, net yield, capital appreciation projection, or financial modeling presented on this website or by our advisors is based on historical market data, prevailing rental trends, and third-party algorithmic projections. These figures are illustrative models and do not constitute guaranteed returns.\n\nRealTerra Global Properties L.L.C is not a registered financial or investment advisory firm under the Securities and Commodities Authority (SCA) or DFSA. Clients are advised to seek independent legal, tax, and certified financial counsel tailored to their individual financial standing and jurisdiction."
+    },
+    {
+      "title": "5. Statutory RERA Escrow Protection & Fund Handling",
+      "content": "In strict compliance with Law No. 8 of 2007 Concerning Escrow Accounts for Real Estate Development in the Emirate of Dubai:\n• RealTerra Global Properties L.L.C will NEVER request or accept property purchase funds, staged construction instalments, or booking down-payments into our corporate or personal accounts.\n• All payments for off-plan property must be made directly by bank wire, manager's cheque, or developer payment gateway payable solely to the certified RERA Project Escrow Account designated for the specific development.\n• Official receipts and DLD Oqood registrations are issued directly by the master developer and the Dubai Land Department."
+    },
+    {
+      "title": "6. Anti-Money Laundering (AML) & Counter-Terrorism Financing (CTF)",
+      "content": "As a Designated Non-Financial Business and Profession (DNFBP) regulated under UAE Federal Decree-Law No. 20 of 2018 on Anti-Money Laundering and Combating the Financing of Terrorism:\n• RealTerra is legally obligated to execute Know Your Customer (KYC) and Customer Due Diligence (CDD) procedures on all buyers, sellers, and ultimate beneficial owners (UBO).\n• Clients must provide verified identification (passport copy, proof of address, corporate charter documents, source of wealth declarations).\n• We are legally required to file Suspicious Transaction Reports (STRs) through the UAE Financial Intelligence Unit (FIU) goAML platform where mandatory indicators are met, without notifying the client (anti-tipping-off laws)."
+    },
+    {
+      "title": "7. Intellectual Property & Website Use",
+      "content": "All content, proprietary market research, algorithmic analysis, design tokens, logos, and custom code on realterra.ae are the exclusive intellectual property of REALTERRA GLOBAL PROPERTIES L.L.C. Unauthorised reproduction, automated scraping, framing, or redistribution of our market analysis or proprietary listings is strictly prohibited without explicit written authorisation."
+    },
+    {
+      "title": "8. Limitation of Liability",
+      "content": "To the maximum extent permitted by UAE law, RealTerra Global Properties L.L.C, its officers, directors, employees, and affiliates shall not be liable for any direct, indirect, punitive, or consequential damages resulting from developer construction delays, masterplan revisions, developer insolvencies, municipal zoning changes, or market valuation fluctuations."
+    },
+    {
+      "title": "9. Governing Law & Jurisdiction",
+      "content": "These Terms of Service and any contractual relationship arising from our brokerage services shall be governed by and construed in accordance with the federal laws of the United Arab Emirates and the local laws of the Emirate of Dubai.\n\nAny dispute, controversy, or claim arising out of or relating to these terms shall be submitted to the exclusive jurisdiction of the competent Dubai Courts, or, where agreed in writing by the parties, the Courts of the Dubai International Financial Centre (DIFC)."
+    },
+    {
+      "title": "10. Contact & Regulatory Inquiries",
+      "content": "For legal notices, compliance queries, or verification of broker credentials:\n• Legal Entity: REALTERRA GLOBAL PROPERTIES L.L.C\n• Registered Office: Office C-50, Trade Centre 2, Dubai, Dubai, 000, Dubai\n• Direct Phone: +971 55 508 4911\n• Compliance Email: operations@realterra.ae\n• RERA Registration: ORN 34821\n• Trade License: 1198420"
+    }
+  ],
+  "seo": {
+    "title": "Terms of Service & RERA Regulatory Disclaimers | RealTerra Global Properties",
+    "description": "Terms of Service and statutory RERA brokerage disclaimers for RealTerra Global Properties L.L.C (ORN 34821). Law No. 7/2006, Law No. 8/2007 Escrow, AML compliance, and Unified Contracts."
+  }
+}

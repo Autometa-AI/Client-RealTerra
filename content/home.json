@@ -30,10 +30,30 @@
     "headline": "How We Select",
     "subtext": "Every recommendation rests on a documented investment thesis. No exceptions.",
     "pillars": [
-      "Thesis-Driven Selection",
-      "Infrastructure Alpha",
-      "Developer Due Diligence",
-      "Portfolio Architecture"
+      {
+        "tag": "01",
+        "title": "Thesis-Driven Selection",
+        "description": "Macro trends, micro supply dynamics, and exit liquidity documented before any capital is committed.",
+        "image": "/images/dubai-architecture.jpg"
+      },
+      {
+        "tag": "02",
+        "title": "Infrastructure Alpha",
+        "description": "We map infrastructure approvals, zone reclassifications, and transit pipelines before market repricing.",
+        "image": "/images/dubai-south.jpg"
+      },
+      {
+        "tag": "03",
+        "title": "Developer Due Diligence",
+        "description": "Escrow compliance, completion track records, and build quality systematically audited across past phases.",
+        "image": "/images/developer-analysis.jpg"
+      },
+      {
+        "tag": "04",
+        "title": "Portfolio Architecture",
+        "description": "Balanced exposure across high-yield assets, capital growth corridors, and off-plan positions.",
+        "image": "/images/luxury-development.jpg"
+      }
     ],
     "linkLabel": "Read our methodology",
     "image": "/images/dubai-architecture.jpg"
@@ -47,21 +67,21 @@
         "tag": "Ras Al Khaimah",
         "name": "Al Marjan Island",
         "description": "The UAE's most anticipated gaming and hospitality destination. The Wynn effect will permanently reprice this market.",
-        "yield": "Yield 7.2 – 9.1%",
+        "yield": "Studio, 1 BHK, 2 BHK",
         "image": "/images/al-marjan-island.jpg"
       },
       {
         "tag": "Dubai",
         "name": "Dubai South",
         "description": "Al Maktoum International's expansion makes this the decade's most significant long-play in the emirate.",
-        "yield": "Yield 6.8 – 8.4%",
+        "yield": "1 BHK, 2 BHK, 3 BHK & Villas",
         "image": "/images/dubai-south.jpg"
       },
       {
         "tag": "Dubai",
         "name": "Dubai Maritime City",
         "description": "Waterfront living between Port Rashid and Business Bay, the decade's most underpriced waterfront opportunity.",
-        "yield": "Yield 6.2 – 7.8%",
+        "yield": "1 BHK, 2 BHK, 3 BHK",
         "image": "/images/dubai-maritime-city.jpg"
       }
     ]

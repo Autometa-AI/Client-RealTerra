@@ -95,7 +95,7 @@ export default async function ProjectDetail({ params }) {
   // Only the facts that were actually filled in get a card.
   const facts = [
     ['price', 'Starting price', p.from],
-    ['yield', 'Gross yield', p.yield],
+    ['type', 'Unit configuration', p.type || p.yield],
     ['handover', 'Handover', p.handover],
     ['type', 'Property type', p.propertyType],
     ['bedrooms', 'Bedrooms', p.bedrooms],

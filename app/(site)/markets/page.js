@@ -64,7 +64,7 @@ export default async function Markets() {
             <p className="market-desc">{m.description}</p>
             <div className="market-metrics">
               <div className="market-metric"><span className="metric-lbl">Capital Growth (3yr)</span><span className="metric-val metric-up">{m.capitalGrowth}</span></div>
-              <div className="market-metric"><span className="metric-lbl">Gross Rental Yield</span><span className="metric-val">{m.rentalYield}</span></div>
+              <div className="market-metric"><span className="metric-lbl">Property Type</span><span className="metric-val">{m.rentalYield}</span></div>
               <div className="market-metric"><span className="metric-lbl">Entry Point</span><span className="metric-val">{m.entryPoint}</span></div>
               <div className="market-metric"><span className="metric-lbl">RealTerra Conviction</span><span className="metric-val">{m.conviction}</span></div>
             </div>

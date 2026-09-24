@@ -7,7 +7,20 @@ const fs = require('fs');
 const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
 
-const PAGES = ['site', 'home', 'about', 'markets', 'projects', 'blogs', 'contact'];
+const PAGES = [
+  'site',
+  'home',
+  'about',
+  'markets',
+  'projects',
+  'blogs',
+  'contact',
+  'privacy',
+  'guide',
+  'services',
+  'terms',
+  'calculator',
+];
 
 async function main() {
   const url = process.env.SUPABASE_URL;
@@ -25,11 +38,16 @@ async function main() {
       .from('cms_content')
       .select('content, updated_at, updated_by')
       .eq('page', page)
-      .single();
+      .maybeSingle();
 
     if (error) {
       console.error(`Failed to read "${page}":`, error.message);
       process.exit(1);
+    }
+
+    if (!data) {
+      console.log(`Skipping "${page}" (no row in database yet)`);
+      continue;
     }
 
     fs.writeFileSync(

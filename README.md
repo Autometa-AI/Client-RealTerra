@@ -2,7 +2,7 @@
 
 Marketing site for RealTerra — an analytical brokerage for ultra-high-net-worth
 property investors in the UAE.
-
+,
 Next.js 15 (App Router), React 19, plain CSS with design tokens. No CSS framework.
 
 ## Running locally

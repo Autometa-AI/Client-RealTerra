@@ -9,7 +9,9 @@
       "UHNWI property advisory",
       "Al Marjan Island",
       "Dubai South"
-    ]
+    ],
+    "facebookDomainVerification": "91w5q1s3mb6krc6ey2kpnf1fpilt5w",
+    "metaPixelId": "1652794879529251"
   },
   "nav": {
     "wordmark": "RealTerra",
@@ -50,7 +52,10 @@
     ],
     "email": "hello@realterra.ae",
     "copyright": "© 2025 RealTerra Global Properties LLC. All rights reserved.",
-    "licenseLine": "RERA Licensed · Dubai Land Department"
+    "licenseLine": "RERA Licensed · Dubai Land Department",
+    "mapTitle": "Office Location",
+    "mapQuery": "Office C-50, Trade Centre 2, Dubai, United Arab Emirates",
+    "mapLabel": "Trade Centre 2 · Dubai, UAE"
   },
   "social": [
     { "platform": "Instagram", "url": "https://instagram.com/", "visible": true },

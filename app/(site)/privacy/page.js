@@ -213,7 +213,7 @@ export default async function PrivacyPage() {
               <p className="privacy-card-title">{company.legalName || 'REALTERRA GLOBAL PROPERTIES L.L.C'}</p>
               <div className="privacy-card-row">
                 <span className="privacy-card-k">Regulatory Authority</span>
-                <span className="privacy-card-v">{company.reraOrn || 'RERA ORN 34821 · DLD'}</span>
+                <span className="privacy-card-v">{company.reraOrn || 'RERA ORN 63122 · DLD'}</span>
               </div>
               <div className="privacy-card-row">
                 <span className="privacy-card-k">Trade License</span>
@@ -292,7 +292,7 @@ export default async function PrivacyPage() {
                   </div>
                   <div className="privacy-detail-item">
                     <dt className="privacy-detail-term">Brokerage license</dt>
-                    <dd className="privacy-detail-def">{company.reraOrn || 'RERA ORN 34821 · Dubai Land Department'}</dd>
+                    <dd className="privacy-detail-def">{company.reraOrn || 'RERA ORN 63122 · Dubai Land Department'}</dd>
                   </div>
                   <div className="privacy-detail-item">
                     <dt className="privacy-detail-term">Registered address</dt>

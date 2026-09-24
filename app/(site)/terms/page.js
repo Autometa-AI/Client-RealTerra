@@ -96,7 +96,7 @@ export default async function TermsPage() {
       >
         <div className="terms-hero-meta">
           <span className="terms-meta-pill">Last Updated: {hero.lastUpdated || 'March 2025'}</span>
-          <span className="terms-meta-pill">RERA ORN 34821</span>
+          <span className="terms-meta-pill">RERA ORN 63122</span>
           <span className="terms-meta-pill">DLD License 1198420</span>
         </div>
       </PageHero>

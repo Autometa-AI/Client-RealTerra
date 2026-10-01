@@ -216,10 +216,9 @@ is in place and waiting.
   file is uploaded against it (Site-Wide → Developer Partner Logos). Ten names
   are seeded: Emaar, DAMAC, Sobha, Danube, Ellington, Meraas, Omniyat, Imtiaz,
   Aldar, Binghatti.
-- **Google reviews** are still the placeholder copy shipped with the block
-  ("Replace this with a real review…"). The Google Business account is under
-  `operations@realterra.com`; the reviews block is CMS-authored, so pulling
-  them live is a separate integration.
+- **Google reviews** are connected to the official Google Business profile
+  with real client reviews, direct link to the Google Maps review profile,
+  and direct links/buttons for clients to review the business on Google.
 - **Social links** are placeholder profile URLs in Site-Wide → Social Media
   Links. Paste the real ones and untick anything that does not exist yet.
 - **Gaurav's portrait** still has its background. Both founder windows are now

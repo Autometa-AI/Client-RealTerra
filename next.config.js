@@ -12,9 +12,13 @@ try {
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: supabaseHostname
-      ? [{ protocol: 'https', hostname: supabaseHostname, pathname: '/storage/v1/object/public/**' }]
-      : [],
+    remotePatterns: [
+      ...(supabaseHostname
+        ? [{ protocol: 'https', hostname: supabaseHostname, pathname: '/storage/v1/object/public/**' }]
+        : []),
+      { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
+      { protocol: 'https', hostname: '*.googleusercontent.com' },
+    ],
   },
   async redirects() {
     return [

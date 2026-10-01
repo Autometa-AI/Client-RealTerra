@@ -139,30 +139,25 @@
   "reviews": {
     "eyebrow": "Client Feedback",
     "headline": "What our clients say",
-    "ratingSummary": "Rated 5.0 on Google",
+    "ratingSummary": "Rated 5.0 on Google (2 reviews)",
     "linkLabel": "Read all reviews",
-    "linkUrl": "",
+    "linkUrl": "https://www.google.com/maps/place//@25.2139552,55.278056,17z/data=!3m1!4b1!4m3!3m2!1s0x3e5f43d568a6c4f7:0x63894311beee41a7!12e1?entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D",
+    "reviewButtonLabel": "Review our business",
+    "reviewButtonUrl": "https://g.page/r/CadB7r4RQ4ljEBM/review",
     "items": [
       {
-        "name": "Client name",
-        "avatar": "",
+        "name": "Mohammed Sabin",
+        "avatar": "/images/reviews/mohammed-sabin.jpg",
         "rating": "5",
-        "text": "Replace this with a real review. Keep each one to a few sentences so the cards stay the same height.",
-        "date": "March 2026"
-      },
-      {
-        "name": "Client name",
-        "avatar": "",
-        "rating": "5",
-        "text": "Replace this with a real review. Keep each one to a few sentences so the cards stay the same height.",
+        "text": "Gaurav is a great realtor and supports alot even after the transaction is done.",
         "date": "February 2026"
       },
       {
-        "name": "Client name",
-        "avatar": "",
+        "name": "Rajat Rai Mahajan",
+        "avatar": "/images/reviews/rajat-rai-mahajan.jpg",
         "rating": "5",
-        "text": "Replace this with a real review. Keep each one to a few sentences so the cards stay the same height.",
-        "date": "January 2026"
+        "text": "5-star rating on Google for RealTerra Global Properties.",
+        "date": "February 2026"
       }
     ]
   },

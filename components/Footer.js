@@ -89,6 +89,11 @@ export default function Footer({ site }) {
             <li><a href={`mailto:${footer.email}`}>{footer.email}</a></li>
             <li><Link href="/contact">WhatsApp</Link></li>
             <li><Link href="/contact">Book a Call</Link></li>
+            <li>
+              <a href="https://g.page/r/CadB7r4RQ4ljEBM/review" target="_blank" rel="noreferrer">
+                Review Our Business ↗
+              </a>
+            </li>
           </ul>
         </div>
         <div className="footer-map-col">

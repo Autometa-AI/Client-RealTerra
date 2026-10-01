@@ -41,11 +41,23 @@ export default function Reviews({ content }) {
               {content.ratingSummary}
             </span>
           )}
-          {content.linkLabel && content.linkUrl && (
-            <a className="arrow-link" href={content.linkUrl} target="_blank" rel="noreferrer">
-              {content.linkLabel}
-            </a>
-          )}
+          <div className="reviews-actions">
+            {content.linkLabel && content.linkUrl && (
+              <a className="arrow-link" href={content.linkUrl} target="_blank" rel="noreferrer">
+                {content.linkLabel}
+              </a>
+            )}
+            {content.reviewButtonUrl && (
+              <a
+                className="btn btn-dark review-header-btn"
+                href={content.reviewButtonUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {content.reviewButtonLabel || 'Review our business'} ↗
+              </a>
+            )}
+          </div>
         </div>
       </div>
 
@@ -67,6 +79,34 @@ export default function Reviews({ content }) {
             </figcaption>
           </figure>
         ))}
+
+        {content.reviewButtonUrl && (
+          <figure className={`review-card review-card-invite reveal${items.length ? ` d${Math.min(items.length, 3)}` : ''}`}>
+            <div className="review-invite-top">
+              <span className="review-invite-badge">
+                <GoogleG />
+                <span>Google Review</span>
+              </span>
+              <Stars rating={5} />
+            </div>
+            <div className="review-invite-content">
+              <h3 className="review-invite-title">Work with RealTerra?</h3>
+              <p className="review-invite-text">
+                Your feedback helps future investors navigate UAE real estate with confidence. Share your experience with our team on Google.
+              </p>
+            </div>
+            <div className="review-invite-foot">
+              <a
+                className="btn btn-outline-dark review-invite-btn"
+                href={content.reviewButtonUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {content.reviewButtonLabel || 'Review our business'} ↗
+              </a>
+            </div>
+          </figure>
+        )}
       </div>
     </section>
   );

@@ -29,8 +29,8 @@ export default function ProjectEnquiryForm({ project, content }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...values, project, interest: 'Specific Off-Plan Project' }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || 'Something went wrong. Please try again later.');
       setStatus('success');
     } catch (err) {
       setStatus('error');

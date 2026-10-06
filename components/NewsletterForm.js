@@ -17,8 +17,8 @@ export default function NewsletterForm({ content }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || 'Something went wrong. Please try again later.');
       setStatus('success');
     } catch (err) {
       setStatus('error');
